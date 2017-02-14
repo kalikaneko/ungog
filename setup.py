@@ -15,6 +15,6 @@ setup(
         'console_scripts': ['ungogmycss=ungog.ungog:main']},
     classifiers=[
         "Environment :: Console",
+        "Programming Language :: Python :: 3",
     ],
-    zip_safe=False
 )
