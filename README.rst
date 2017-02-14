@@ -7,7 +7,7 @@ install
 -------
 ::
 
-  pip install ungog
+  pip3 install ungog
 
 
 usage
