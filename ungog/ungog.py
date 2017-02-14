@@ -3,10 +3,15 @@
 # Do What The Fuck You Want License
 # (c) Wu Ming, 2017
 
+"""
+UnGoogleify your css
+"""
+
 import re
 import urllib.request
 from glob import glob
 from os import makedirs, remove
+import sys
 
 
 TAINTEDAPI = 'fonts.googleapis.com'
@@ -94,3 +99,15 @@ def _cleanup():
     leftovers += glob('__*.replaced')
     for leftover in leftovers:
         remove(leftover)
+
+
+def main():
+    if len(sys.argv) != 2:
+        print('Usage: ungog main.css')
+        exit(1)
+    cssfile = sys.argv[1]
+    ungog(cssfile)
+
+
+if __name__ == '__main__':
+    main()
